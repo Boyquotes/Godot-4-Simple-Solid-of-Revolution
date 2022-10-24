@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtvhpu61nk7aj"]
+
+[ext_resource type="Script" path="res://Scenes/Test1_Mesh_generation/MeshInstance3D.gd" id="1_encnp"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ixill"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 1, 1, 1e-05),
+"format": 4097,
+"index_count": 8,
+"index_data": PackedByteArray(0, 0, 1, 0, 1, 0, 2, 0, 2, 0, 3, 0, 3, 0, 4, 0),
+"primitive": 1,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0)
+}]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.199966, 0.142086, 0)
+mesh = SubResource("ArrayMesh_ixill")
+script = ExtResource("1_encnp")
