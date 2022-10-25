@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqw387t7p1pb3"]
+
+[ext_resource type="Script" path="res://Scenes/Test4_Mesh_Faces/MeshFaces.gd" id="1_y867i"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_50mq2"]
+_surfaces = [{
+"aabb": AABB(-5, 0, -5, 10, 25, 10),
+"format": 4097,
+"index_count": 12,
+"index_data": PackedByteArray(0, 0, 1, 0, 3, 0, 0, 0, 3, 0, 5, 0, 0, 0, 5, 0, 7, 0, 0, 0, 1, 0, 7, 0),
+"primitive": 3,
+"vertex_count": 9,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 200, 64, 0, 0, 0, 0, 0, 0, 160, 64, 0, 0, 200, 65, 0, 0, 0, 0, 0, 124, 48, 37, 0, 0, 200, 64, 0, 0, 32, 64, 0, 124, 176, 37, 0, 0, 200, 65, 0, 0, 160, 64, 0, 0, 32, 192, 0, 0, 200, 64, 0, 124, 176, 37, 0, 0, 160, 192, 0, 0, 200, 65, 0, 124, 48, 38, 0, 93, 4, 166, 0, 0, 200, 64, 0, 0, 32, 192, 0, 93, 132, 166, 0, 0, 200, 65, 0, 0, 160, 192)
+}]
+
+[node name="Main" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_50mq2")
+script = ExtResource("1_y867i")

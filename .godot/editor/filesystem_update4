@@ -1,2 +1,4 @@
 res://Scenes/Test3_Mesh_revolution/main.tscn
 res://Scenes/Test3_Mesh_revolution/Mesh_revolution.gd
+res://Scenes/Test4_Mesh_Faces/main.tscn
+res://Scenes/Test4_Mesh_Faces/MeshFaces.gd

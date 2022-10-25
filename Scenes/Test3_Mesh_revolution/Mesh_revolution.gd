@@ -13,7 +13,7 @@ func _ready() -> void:
 	
 	for theta in range(0.0,360.0,rotation_range):
 		for x in x_coords_base:
-			var point_to_add = Vector3(x*cos(deg_to_rad(theta)), pow(x,4)/500, x*sin(deg_to_rad(theta)))
+			var point_to_add = Vector3(x*cos(deg_to_rad(theta)), pow(x,2)/10, x*sin(deg_to_rad(theta)))
 			if not array_points.has(point_to_add):
 				array_points.append(point_to_add)
 	mesh_data[ArrayMesh.ARRAY_VERTEX] = PackedVector3Array(array_points)
