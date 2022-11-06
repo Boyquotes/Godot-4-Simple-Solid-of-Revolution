@@ -11,7 +11,7 @@ func _ready() -> void:
 	var vertices = PackedVector3Array()
 	var array_index = PackedInt32Array()
 	
-	var x_coords_base = generate_points(0,9,20)
+	var x_coords_base = generate_points(0,5,5)
 	var y_coords_base = generate_y_coords(x_coords_base)
 	
 	
@@ -75,6 +75,7 @@ func _ready() -> void:
 	mesh = ArrayMesh.new()
 	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,mesh_data)
 
+
 func wrap_up(start_point,rounds,shift_mesh):
 	var counter = 1
 	var current_index = start_point
@@ -137,15 +138,10 @@ func wrap_down(start_point,rounds,shift_mesh):
 	return list
 
 
-
-
 func generate_y_coords(x):
 	var array = []
 	for i in x:
-		if i < 5.75:
-			array.append(pow(i,4)/100)
-		else:
-			array.append(-i**2 + 12*i - 25)
+		array.append(pow(i,2))
 	return array
 
 
@@ -171,3 +167,4 @@ func numbers_on_space(list):
 		label.text = str(i)+"->x:"+str(list[i].x)+" y:"+str(list[i].y)+" z:"+str(list[i].z)
 		label.position = list[i]
 		$"../Node3D".add_child(label)
+
